@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const links = [
   { href: "/about", label: "About" },
   { href: "/roster", label: "Roster" },
