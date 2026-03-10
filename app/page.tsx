@@ -3,25 +3,25 @@ import Link from "next/link";
 const spotlight = [
   {
     title: "Season Opener",
-    subtitle: "Build race stories and featured meet coverage.",
+    subtitle: "Meet coverage, atmosphere, and the first statement of the year.",
     image:
       "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Long Run Morning",
-    subtitle: "Capture training culture and the daily process.",
+    subtitle: "The daily work that builds the program behind the scenes.",
     image:
       "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Pack Finish",
-    subtitle: "Highlight team mentality and competition moments.",
+    subtitle: "Moments that define team mentality and race-day identity.",
     image:
       "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Workout Day",
-    subtitle: "Show the grind, repetitions, and preparation.",
+    subtitle: "Strength, reps, discipline, and the edge built in training.",
     image:
       "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
   },
@@ -31,7 +31,7 @@ const sections = [
   {
     title: "About",
     href: "/about",
-    text: "History, goals, identity, and the standards that define Farmers XC.",
+    text: "History, identity, goals, and the standards that define Farmers XC.",
   },
   {
     title: "Roster",
@@ -41,53 +41,53 @@ const sections = [
   {
     title: "Media",
     href: "/media",
-    text: "Race photos, training visuals, documentaries, and featured moments.",
+    text: "Race visuals, training footage, featured moments, and archives.",
   },
   {
     title: "Results",
     href: "/results",
-    text: "Meet archive, season progression, PR history, and team records.",
+    text: "Meet history, progression across seasons, and key performances.",
   },
   {
     title: "Schedule",
     href: "/schedule",
-    text: "Upcoming races, key dates, and the competitive calendar.",
+    text: "The upcoming season map: races, important dates, and travel.",
   },
   {
     title: "Contact",
     href: "/contact",
-    text: "Program information, recruiting details, and external links.",
+    text: "Program information, recruiting details, and external team links.",
   },
 ];
 
 const reel = [
   {
-    title: "Season Opener",
+    title: "Race Atmosphere",
     image:
       "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Long Run Morning",
+    title: "Road Miles",
     image:
       "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Pack Finish",
+    title: "Start Line",
     image:
       "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Workout Day",
+    title: "Strength Session",
     image:
       "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Team Travel",
+    title: "Travel Day",
     image:
       "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Championship Week",
+    title: "Championship Build",
     image:
       "https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1200&q=80",
   },
@@ -96,84 +96,90 @@ const reel = [
 export default function HomePage() {
   return (
     <main className="bg-black text-white">
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20">
-        <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.35em] text-white/40">
-            Cross Country Storytelling
-          </p>
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_30%)]" />
 
-          <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] md:text-7xl">
-            A living media archive for the story, identity, and momentum of
-            Farmers XC.
-          </h1>
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.05fr_0.95fr] md:py-28">
+          <div className="space-y-7">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/38">
+              Cross Country Storytelling
+            </p>
 
-          <p className="max-w-2xl text-base leading-8 text-white/65 md:text-lg">
-            Built like a modern sports media page, this site is the home for
-            race coverage, athlete profiles, team history, results, and the
-            visuals that define the program.
-          </p>
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.92] md:text-7xl">
+              A living media archive for the story, identity, and momentum of
+              Farmers XC.
+            </h1>
 
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Link
-              href="/media"
-              className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:opacity-90"
-            >
-              Enter the archive
-            </Link>
-            <Link
-              href="/about"
-              className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/85 transition hover:border-white/30 hover:bg-white/5"
-            >
-              Explore the program
-            </Link>
-          </div>
-        </div>
+            <p className="max-w-2xl text-base leading-8 text-white/62 md:text-lg">
+              Built like a modern sports feature page, this site is the home
+              for race coverage, athlete profiles, team history, results, and
+              the visuals that define the program.
+            </p>
 
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/40">
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-lg font-medium">Featured Strip</h2>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/65">
-              Interactive
-            </span>
-          </div>
-
-          <div className="flex h-[360px] gap-3 overflow-x-auto pb-2">
-            {spotlight.map((item) => (
-              <article
-                key={item.title}
-                className="group relative min-w-[170px] flex-1 overflow-hidden rounded-[1.6rem] border border-white/10 transition-all duration-500 hover:min-w-[250px]"
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link
+                href="/media"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90"
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-base font-semibold">{item.title}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/70">
-                    {item.subtitle}
-                  </p>
-                </div>
-              </article>
-            ))}
+                Enter the archive
+              </Link>
+
+              <Link
+                href="/about"
+                className="rounded-full border border-white/18 px-6 py-3 text-sm font-medium text-white/88 transition hover:border-white/35 hover:bg-white/6"
+              >
+                Explore the program
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-lg font-medium">Featured Strip</h2>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/62">
+                Interactive
+              </span>
+            </div>
+
+            <div className="flex h-[380px] gap-3 overflow-x-auto pb-2">
+              {spotlight.map((item) => (
+                <article
+                  key={item.title}
+                  className="group relative min-w-[180px] flex-1 overflow-hidden rounded-[1.7rem] border border-white/10 transition-all duration-500 hover:min-w-[265px]"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="text-base font-semibold">{item.title}</p>
+                    <p className="mt-1 text-xs leading-5 text-white/70">
+                      {item.subtitle}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-8">
-        <div className="mb-6 flex items-end justify-between gap-6">
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/38">
               Site Structure
             </p>
-            <h2 className="mt-2 text-2xl font-semibold md:text-3xl">
+            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
               The backbone of the Farmers XC universe
             </h2>
           </div>
-          <p className="hidden max-w-xl text-sm leading-6 text-white/50 md:block">
-            Each page is a lane of the archive: team identity, roster, media,
-            results, schedule, and contact.
+
+          <p className="max-w-xl text-sm leading-6 text-white/48">
+            Every page is a lane of the archive: team identity, roster,
+            visuals, results, schedule, and contact.
           </p>
         </div>
 
@@ -182,39 +188,41 @@ export default function HomePage() {
             <Link
               key={section.href}
               href={section.href}
-              className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]"
+              className="group rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.055]"
             >
-              <p className="mb-3 text-sm uppercase tracking-[0.22em] text-white/40 transition group-hover:text-white/60">
+              <p className="mb-3 text-xs uppercase tracking-[0.28em] text-white/38 transition group-hover:text-white/62">
                 {section.title}
               </p>
-              <p className="leading-7 text-white/72">{section.text}</p>
+              <p className="text-lg font-medium text-white">{section.title}</p>
+              <p className="mt-3 leading-7 text-white/68">{section.text}</p>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-white/40">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/38">
               Film Reel Gallery
             </p>
-            <h2 className="mt-2 text-2xl font-semibold md:text-3xl">
-              Hover-expand scrolling media strip
+            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
+              A scrolling strip built for race visuals
             </h2>
           </div>
-          <p className="max-w-xl text-sm leading-6 text-white/50">
-            Replace these with real race images, workout shots, bus rides, team
-            candids, championship visuals, and season-defining moments.
+
+          <p className="max-w-xl text-sm leading-6 text-white/48">
+            Replace these with real race photos, training days, travel shots,
+            finish-line moments, and championship imagery.
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-4">
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-4">
           <div className="flex gap-4 overflow-x-auto pb-3">
             {reel.map((item) => (
               <article
                 key={item.title}
-                className="group relative h-[430px] min-w-[190px] overflow-hidden rounded-[1.75rem] border border-white/10 transition-all duration-500 hover:min-w-[340px]"
+                className="group relative h-[440px] min-w-[200px] overflow-hidden rounded-[1.8rem] border border-white/10 transition-all duration-500 hover:min-w-[345px]"
               >
                 <img
                   src={item.image}
@@ -224,7 +232,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-95" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="text-xl font-semibold">{item.title}</p>
-                  <p className="mt-2 text-sm text-white/70">
+                  <p className="mt-2 text-sm text-white/68">
                     Add your real caption here
                   </p>
                 </div>
