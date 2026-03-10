@@ -1,246 +1,622 @@
 import Link from "next/link";
 
-const spotlight = [
+const featureCards = [
   {
     title: "Season Opener",
-    subtitle: "Meet coverage, atmosphere, and the first statement of the year.",
+    subtitle: "Race coverage, atmosphere, and the first statement of the year.",
     image:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Long Run Morning",
-    subtitle: "The daily work that builds the program behind the scenes.",
+    title: "Road Miles",
+    subtitle: "The daily process that builds the team behind the scenes.",
     image:
-      "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Pack Finish",
-    subtitle: "Moments that define team mentality and race-day identity.",
+    title: "Start Line Focus",
+    subtitle: "Intensity, composure, and the moments before the gun.",
     image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Workout Day",
-    subtitle: "Strength, reps, discipline, and the edge built in training.",
+    title: "Strength Session",
+    subtitle: "Power, consistency, and the edge built outside the course.",
     image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
-const sections = [
+const structureCards = [
   {
     title: "About",
     href: "/about",
-    text: "History, identity, goals, and the standards that define Farmers XC.",
+    text: "History, identity, team standards, and the long-term story of the program.",
   },
   {
     title: "Roster",
     href: "/roster",
-    text: "Athlete profiles, progression, and the people behind the program.",
+    text: "Athlete profiles, progression, class years, and the people behind the results.",
   },
   {
     title: "Media",
     href: "/media",
-    text: "Race visuals, training footage, featured moments, and archives.",
+    text: "Featured race visuals, training galleries, travel moments, and archive drops.",
   },
   {
     title: "Results",
     href: "/results",
-    text: "Meet history, progression across seasons, and key performances.",
+    text: "Meet history, progression across seasons, and key program performances.",
   },
   {
     title: "Schedule",
     href: "/schedule",
-    text: "The upcoming season map: races, important dates, and travel.",
+    text: "The season map: race dates, major meets, travel windows, and key checkpoints.",
   },
   {
     title: "Contact",
     href: "/contact",
-    text: "Program information, recruiting details, and external team links.",
+    text: "Program information, recruiting details, and external team resources.",
   },
 ];
 
-const reel = [
+const reelCards = [
   {
-    title: "Race Atmosphere",
+    title: "Watts Course Energy",
     image:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Road Miles",
+    title: "Tempo Morning",
     image:
-      "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Start Line",
+    title: "Race Pack",
     image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Strength Session",
+    title: "Weight Room",
     image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80",
   },
   {
     title: "Travel Day",
     image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80",
   },
   {
     title: "Championship Build",
     image:
-      "https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
 export default function HomePage() {
   return (
-    <main className="bg-black text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_30%)]" />
+    <>
+      <main className="page-shell">
+        <section className="hero-shell">
+          <div className="hero-backdrop" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.05fr_0.95fr] md:py-28">
-          <div className="space-y-7">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/38">
-              Cross Country Storytelling
-            </p>
+          <div className="hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow">Cross Country Storytelling</p>
 
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.92] md:text-7xl">
-              A living media archive for the story, identity, and momentum of
-              Farmers XC.
-            </h1>
+              <h1>
+                A living media archive for the story, identity, and momentum of
+                Farmers XC.
+              </h1>
 
-            <p className="max-w-2xl text-base leading-8 text-white/62 md:text-lg">
-              Built like a modern sports feature page, this site is the home
-              for race coverage, athlete profiles, team history, results, and
-              the visuals that define the program.
-            </p>
+              <p className="hero-text">
+                Built like a modern sports feature page, this site is the home
+                for race coverage, athlete profiles, team history, results, and
+                the visuals that define the program.
+              </p>
 
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Link
-                href="/media"
-                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90"
-              >
-                Enter the archive
-              </Link>
+              <div className="hero-actions">
+                <Link href="/media" className="btn-primary">
+                  Enter the archive
+                </Link>
 
-              <Link
-                href="/about"
-                className="rounded-full border border-white/18 px-6 py-3 text-sm font-medium text-white/88 transition hover:border-white/35 hover:bg-white/6"
-              >
-                Explore the program
-              </Link>
+                <Link href="/about" className="btn-secondary">
+                  Explore the program
+                </Link>
+              </div>
+            </div>
+
+            <div className="feature-panel">
+              <div className="feature-head">
+                <h2>Featured Strip</h2>
+                <span>Interactive</span>
+              </div>
+
+              <div className="feature-strip">
+                {featureCards.map((item) => (
+                  <article key={item.title} className="feature-card">
+                    <img src={item.image} alt={item.title} />
+                    <div className="feature-overlay" />
+                    <div className="feature-content">
+                      <p className="feature-title">{item.title}</p>
+                      <p className="feature-subtitle">{item.subtitle}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-lg font-medium">Featured Strip</h2>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/62">
-                Interactive
-              </span>
+        <section className="structure-shell">
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Site Structure</p>
+              <h2>The backbone of the Farmers XC universe</h2>
             </div>
 
-            <div className="flex h-[380px] gap-3 overflow-x-auto pb-2">
-              {spotlight.map((item) => (
-                <article
-                  key={item.title}
-                  className="group relative min-w-[180px] flex-1 overflow-hidden rounded-[1.7rem] border border-white/10 transition-all duration-500 hover:min-w-[265px]"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-base font-semibold">{item.title}</p>
-                    <p className="mt-1 text-xs leading-5 text-white/70">
-                      {item.subtitle}
-                    </p>
+            <p className="section-copy">
+              Every page is a lane of the archive: team identity, athlete
+              profiles, visuals, results, schedule, and contact.
+            </p>
+          </div>
+
+          <div className="structure-grid">
+            {structureCards.map((section) => (
+              <Link key={section.href} href={section.href} className="info-card">
+                <p className="info-kicker">{section.title}</p>
+                <h3>{section.title}</h3>
+                <p className="info-text">{section.text}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="reel-shell">
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Film Reel Gallery</p>
+              <h2>A scrolling strip built for race visuals</h2>
+            </div>
+
+            <p className="section-copy">
+              Replace these with actual Texas A&amp;M race photos, long run
+              mornings, travel days, finish-line moments, and championship
+              imagery.
+            </p>
+          </div>
+
+          <div className="reel-frame">
+            <div className="reel-row">
+              {reelCards.map((item) => (
+                <article key={item.title} className="reel-card">
+                  <img src={item.image} alt={item.title} />
+                  <div className="reel-overlay" />
+                  <div className="reel-content">
+                    <p className="reel-title">{item.title}</p>
+                    <p className="reel-caption">Add your real caption here</p>
                   </div>
                 </article>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-white/38">
-              Site Structure
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
-              The backbone of the Farmers XC universe
-            </h2>
-          </div>
+      <style jsx>{`
+        .page-shell {
+          background: #050505;
+          color: white;
+        }
 
-          <p className="max-w-xl text-sm leading-6 text-white/48">
-            Every page is a lane of the archive: team identity, roster,
-            visuals, results, schedule, and contact.
-          </p>
-        </div>
+        .hero-shell {
+          position: relative;
+          overflow: hidden;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {sections.map((section) => (
-            <Link
-              key={section.href}
-              href={section.href}
-              className="group rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.055]"
-            >
-              <p className="mb-3 text-xs uppercase tracking-[0.28em] text-white/38 transition group-hover:text-white/62">
-                {section.title}
-              </p>
-              <p className="text-lg font-medium text-white">{section.title}</p>
-              <p className="mt-3 leading-7 text-white/68">{section.text}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
+        .hero-backdrop {
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(
+              circle at 12% 8%,
+              rgba(255, 255, 255, 0.09),
+              transparent 28%
+            ),
+            radial-gradient(
+              circle at 88% 18%,
+              rgba(255, 255, 255, 0.06),
+              transparent 24%
+            ),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+          pointer-events: none;
+        }
 
-      <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-white/38">
-              Film Reel Gallery
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
-              A scrolling strip built for race visuals
-            </h2>
-          </div>
+        .hero-grid {
+          position: relative;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 76px 28px 88px;
+          display: grid;
+          grid-template-columns: 1.04fr 0.96fr;
+          gap: 44px;
+          align-items: center;
+        }
 
-          <p className="max-w-xl text-sm leading-6 text-white/48">
-            Replace these with real race photos, training days, travel shots,
-            finish-line moments, and championship imagery.
-          </p>
-        </div>
+        .hero-copy {
+          max-width: 760px;
+        }
 
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-4">
-          <div className="flex gap-4 overflow-x-auto pb-3">
-            {reel.map((item) => (
-              <article
-                key={item.title}
-                className="group relative h-[440px] min-w-[200px] overflow-hidden rounded-[1.8rem] border border-white/10 transition-all duration-500 hover:min-w-[345px]"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-95" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="text-xl font-semibold">{item.title}</p>
-                  <p className="mt-2 text-sm text-white/68">
-                    Add your real caption here
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+        .eyebrow {
+          margin: 0 0 18px;
+          text-transform: uppercase;
+          letter-spacing: 0.42em;
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-copy h1 {
+          margin: 0;
+          font-size: clamp(3.1rem, 7vw, 6.1rem);
+          line-height: 0.92;
+          letter-spacing: -0.05em;
+          max-width: 900px;
+        }
+
+        .hero-text {
+          margin: 28px 0 0;
+          max-width: 720px;
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 18px;
+          line-height: 1.8;
+        }
+
+        .hero-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 14px;
+          margin-top: 32px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+          text-decoration: none;
+          border-radius: 999px;
+          padding: 14px 22px;
+          font-size: 14px;
+          font-weight: 700;
+          transition:
+            transform 0.18s ease,
+            background 0.18s ease,
+            border-color 0.18s ease,
+            color 0.18s ease,
+            opacity 0.18s ease;
+        }
+
+        .btn-primary {
+          background: white;
+          color: black;
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-1px);
+          opacity: 0.92;
+        }
+
+        .btn-secondary {
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-secondary:hover {
+          transform: translateY(-1px);
+          border-color: rgba(255, 255, 255, 0.32);
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-panel {
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 34px;
+          padding: 18px;
+          background: rgba(255, 255, 255, 0.04);
+          box-shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
+        }
+
+        .feature-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 14px;
+        }
+
+        .feature-head h2 {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .feature-head span {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.62);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 999px;
+          padding: 7px 12px;
+        }
+
+        .feature-strip {
+          display: flex;
+          gap: 12px;
+          overflow-x: auto;
+          padding-bottom: 6px;
+        }
+
+        .feature-card {
+          position: relative;
+          height: 390px;
+          min-width: 182px;
+          flex: 1;
+          overflow: hidden;
+          border-radius: 28px;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          transition:
+            min-width 0.45s ease,
+            transform 0.45s ease;
+        }
+
+        .feature-card:hover {
+          min-width: 270px;
+        }
+
+        .feature-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1);
+          transition: transform 0.45s ease;
+        }
+
+        .feature-card:hover img {
+          transform: scale(1.05);
+        }
+
+        .feature-overlay,
+        .reel-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.2) 35%,
+            rgba(0, 0, 0, 0.85)
+          );
+        }
+
+        .feature-content {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 18px;
+        }
+
+        .feature-title {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .feature-subtitle {
+          margin: 8px 0 0;
+          color: rgba(255, 255, 255, 0.72);
+          font-size: 13px;
+          line-height: 1.55;
+        }
+
+        .structure-shell,
+        .reel-shell {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 70px 28px 0;
+        }
+
+        .reel-shell {
+          padding-bottom: 20px;
+        }
+
+        .section-header {
+          display: flex;
+          justify-content: space-between;
+          gap: 28px;
+          align-items: end;
+          margin-bottom: 28px;
+        }
+
+        .section-header h2 {
+          margin: 10px 0 0;
+          font-size: clamp(2rem, 4vw, 3rem);
+          line-height: 1;
+        }
+
+        .section-copy {
+          max-width: 540px;
+          margin: 0;
+          color: rgba(255, 255, 255, 0.48);
+          font-size: 14px;
+          line-height: 1.75;
+        }
+
+        .structure-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 20px;
+        }
+
+        .info-card {
+          text-decoration: none;
+          color: inherit;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 32px;
+          background: rgba(255, 255, 255, 0.035);
+          padding: 26px;
+          transition:
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            background 0.2s ease;
+        }
+
+        .info-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(255, 255, 255, 0.24);
+          background: rgba(255, 255, 255, 0.055);
+        }
+
+        .info-kicker {
+          margin: 0 0 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.28em;
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+
+        .info-card h3 {
+          margin: 0;
+          font-size: 23px;
+          font-weight: 700;
+        }
+
+        .info-text {
+          margin: 14px 0 0;
+          color: rgba(255, 255, 255, 0.68);
+          line-height: 1.75;
+          font-size: 15px;
+        }
+
+        .reel-frame {
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 34px;
+          background: rgba(255, 255, 255, 0.035);
+          padding: 16px;
+        }
+
+        .reel-row {
+          display: flex;
+          gap: 14px;
+          overflow-x: auto;
+          padding-bottom: 6px;
+        }
+
+        .reel-card {
+          position: relative;
+          min-width: 210px;
+          height: 460px;
+          overflow: hidden;
+          border-radius: 30px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transition:
+            min-width 0.45s ease,
+            transform 0.45s ease;
+        }
+
+        .reel-card:hover {
+          min-width: 350px;
+        }
+
+        .reel-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.45s ease;
+        }
+
+        .reel-card:hover img {
+          transform: scale(1.05);
+        }
+
+        .reel-content {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 22px;
+        }
+
+        .reel-title {
+          margin: 0;
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .reel-caption {
+          margin: 8px 0 0;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 14px;
+        }
+
+        @media (max-width: 1100px) {
+          .hero-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .structure-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 760px) {
+          .hero-grid,
+          .structure-shell,
+          .reel-shell {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+
+          .hero-grid {
+            padding-top: 52px;
+            padding-bottom: 60px;
+          }
+
+          .hero-copy h1 {
+            font-size: 3rem;
+          }
+
+          .hero-text {
+            font-size: 16px;
+          }
+
+          .structure-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .feature-card {
+            height: 320px;
+            min-width: 150px;
+          }
+
+          .feature-card:hover {
+            min-width: 220px;
+          }
+
+          .reel-card {
+            min-width: 175px;
+            height: 360px;
+          }
+
+          .reel-card:hover {
+            min-width: 260px;
+          }
+
+          .reel-title {
+            font-size: 18px;
+          }
+        }
+      `}</style>
+    </>
   );
 }
